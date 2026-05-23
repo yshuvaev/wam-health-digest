@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>wam-health-digest</title>
+<style>
+body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #ddd; background: #0f1115; line-height: 1.6; }
+code, pre { background: #1f2937; padding: 2px 6px; border-radius: 4px; }
+pre { padding: 12px; overflow-x: auto; }
+a { color: #4ade80; }
+h1, h2 { color: #fff; }
+</style>
+</head>
+<body>
+<h1>wam-health-digest</h1>
+<p>Зашифрованный дайджест состояния пользователя для совместного планирования приёмов пищи между AI-агентами.</p>
+<p>Файл: <a href="./digest.enc"><code>digest.enc</code></a></p>
+<p>Формат: <code>base64(salt[16] || nonce[12] || ciphertext + tag)</code>, AES-256-GCM, ключ — PBKDF2-HMAC-SHA256 (200 000 итераций) из общего пароля.</p>
+<p>Подробности и пример расшифровки в <a href="https://github.com/yshuvaev/wam-health-digest/blob/main/README.md">README</a>.</p>
+</body>
+</html>
